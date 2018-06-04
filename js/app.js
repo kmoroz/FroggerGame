@@ -46,9 +46,38 @@ Player.prototype.render = function() {
 
 Player.prototype.update = function(){
     if(this.y < 10){
+        //should be player.reset()
         this.y = 300;
     }
+    this.checkForCollisions();
 }
+
+Player.prototype.reset = function(){
+    this.x = 200;
+    this.y = 300;
+}
+
+Player.prototype.checkForCollisions = function() {
+    var playerInstance = this;
+    allEnemies.forEach(function(enemy){
+        if(Math.abs(enemy.x - playerInstance.x) < 30  && Math.abs(enemy.y - playerInstance.y) < 30 ){
+            playerInstance.reset();
+        }
+    });
+}
+
+//Math.abs(10 - 50)
+
+//implement player.resset() function
+// should reset player to original coordinates
+
+//implement player.checkIfAlive() function
+// should loop through all enemies and check whether
+// their coordinates intersect with the players
+// compensating for their height and width
+
+//
+
 
 
 Player.prototype.handleInput = function(direction){
@@ -67,7 +96,7 @@ Player.prototype.handleInput = function(direction){
     }
 
     else if(direction == 'down' && this.y < ctx.canvas.height * .60){
-        this.y += 100;
+        this.y += 85;
     }
 
 }
