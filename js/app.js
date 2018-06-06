@@ -1,4 +1,4 @@
-const ROWS = [50, 140, 230];
+const ROWS = [100, 190, 280];
 const SPEEDS = [100, 200, 250, 300, 350, 400, 450];
 const SPAWNRATE = 500
 
