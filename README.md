@@ -1,6 +1,5 @@
 Space Samoyed Arcade Game
 ===============================
-# Space Samoyed
 
 ## Table of Contents
 
