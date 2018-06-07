@@ -1,4 +1,4 @@
-const ROWS = [100, 190, 280];
+const ROWS = [140, 220, 305];
 const SPEEDS = [100, 200, 250, 300, 350, 400, 450];
 const SPAWNRATE = 500
 
@@ -35,7 +35,7 @@ Enemy.prototype.render = function() {
 var Player = function(){
     this.sprite = 'images/char-cat-girl.png';
     this.x = 200;
-    this.y = 300;
+    this.y = 380;
 }
 
 let player = new Player();
@@ -54,13 +54,13 @@ Player.prototype.update = function(){
 
 Player.prototype.reset = function(){
     this.x = 200;
-    this.y = 300;
+    this.y = 380;
 }
 
 Player.prototype.checkForCollisions = function() {
     var playerInstance = this;
     allEnemies.forEach(function(enemy){
-        if(Math.abs(enemy.x - playerInstance.x) < 30  && Math.abs(enemy.y - playerInstance.y) < 30 ){
+        if(Math.abs(enemy.x - playerInstance.x) < 30  && Math.abs(enemy.y - playerInstance.y) < 20 ){
             playerInstance.reset();
         }
     });
