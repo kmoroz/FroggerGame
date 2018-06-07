@@ -1,6 +1,7 @@
 const ROWS = [140, 220, 305];
 const SPEEDS = [100, 200, 250, 300, 350, 400, 450];
-const SPAWNRATE = 500
+const SPAWNRATE = 500;
+var victoryCounter = 0;
 
 // Enemies our player must avoid
 var Enemy = function(yPosition, speed) {
@@ -29,11 +30,13 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
+
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function(){
-    this.sprite = 'images/char-cat-girl.png';
+    this.sprite = 'images/samoyed.png';
     this.x = 200;
     this.y = 380;
 }
@@ -45,11 +48,18 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.update = function(){
-    if(this.y < 10){
-        //should be player.reset()
-        this.y = 300;
+    if(this.y < 100){
+        playSound();
+        this.reset();
+        victoryCounter++;
+
     }
     this.checkForCollisions();
+}
+
+function playSound(){
+    var victorySound = new Audio('victory.wav');
+    victorySound.play();
 }
 
 Player.prototype.reset = function(){
@@ -60,7 +70,7 @@ Player.prototype.reset = function(){
 Player.prototype.checkForCollisions = function() {
     var playerInstance = this;
     allEnemies.forEach(function(enemy){
-        if(Math.abs(enemy.x - playerInstance.x) < 30  && Math.abs(enemy.y - playerInstance.y) < 20 ){
+        if(Math.abs(enemy.x - playerInstance.x) < 60  && Math.abs(enemy.y - playerInstance.y) < 20 ){
             playerInstance.reset();
         }
     });

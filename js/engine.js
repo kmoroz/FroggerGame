@@ -24,9 +24,10 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
+    canvas.width = 506;
     canvas.height = 606;
     doc.body.appendChild(canvas);
+
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -109,10 +110,10 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/moon-block.png',   // Top row is water
+                'images/space-block.png',   // Row 1 of 3 of stone
+                'images/space-block.png',   // Row 2 of 3 of stone
+                'images/space-block.png',   // Row 3 of 3 of stone
                 'images/grass-block.png',   // Row 1 of 2 of grass
                 'images/grass-block.png'    // Row 2 of 2 of grass
             ],
@@ -140,7 +141,17 @@ var Engine = (function(global) {
             }
         }
 
+        renderScore();
         renderEntities();
+    }
+
+    function renderScore(){
+        ctx.rect(10,520,170,50);
+        ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+        ctx.fill();
+        ctx.font = "bold 37px VT323";
+        ctx.fillStyle = "rgba(0, 0, 0, 0.8)";
+        ctx.fillText("Victory: " + victoryCounter,14,556);
     }
 
     /* This function is called by the render function and is called on each game
@@ -171,11 +182,11 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
+        'images/space-block.png',
+        'images/moon-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-cat-girl.png'
+        'images/samoyed.png'
     ]);
     Resources.onReady(init);
 
