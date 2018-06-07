@@ -12,7 +12,7 @@
 
 ## Instructions
 
-This is a clone of a classic arcade game Frogger. This time, however, the protagonist is not a frog but a samoyed dog. Samoyeds actually come from the moon and you need to help this one to travel back to its planet. You can do so by using **←** left, **→** right, **↑** up or **↓** down arrows. Whenever you crash with a nyan cat on the way your position resets. Whevenver you successfully land on the moon your position also resets and a victory score increments by one as well. 
+This is a clone of the classic arcade game Frogger. This time, however, the protagonist is not a frog but a samoyed dog. Samoyeds actually come from the moon and you need to help this one to travel back to its planet. You can do so by using **←** left, **→** right, **↑** up or **↓** down arrows. Whenever you crash with a nyan cat on the way, your position resets. Whevenver you successfully land on the moon, your position also resets and a victory score increments by one point. 
 
 
 
