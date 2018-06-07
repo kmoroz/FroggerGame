@@ -1,9 +1,18 @@
-frontend-nanodegree-arcade-game
-===============================
+# Space Samoyed
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Demo](#Demo)
+* [Instructions](#instructions)
+
+## Demo
+[Play Here](https://kmoroz.github.io/FroggerGame/)
 
 ![arcadegame](https://user-images.githubusercontent.com/21237634/41125739-39023d86-6a9d-11e8-8bad-ca6394a2809d.gif)
+
+## Instructions
+
+This is a clone of a classic arcade game Frogger. This time, however, the protagonist is not a frog but a samoyed dog. Samoyeds actually come from the moon and you need to help this one to travel back to its planet. You can do so by using **←** left, **→** right, **↑** up or **↓** down arrows. Whenever you crash with a nyan cat on the way your position resets. Whevenver you successfully land on the moon your position also resets and a victory score increments by one as well. 
+
+
 
