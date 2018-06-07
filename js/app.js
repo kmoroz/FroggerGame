@@ -76,17 +76,6 @@ Player.prototype.checkForCollisions = function() {
     });
 }
 
-//Math.abs(10 - 50)
-
-//implement player.resset() function
-// should reset player to original coordinates
-
-//implement player.checkIfAlive() function
-// should loop through all enemies and check whether
-// their coordinates intersect with the players
-// compensating for their height and width
-
-//
 
 
 
@@ -120,10 +109,6 @@ setInterval(function(){ allEnemies.push(new Enemy(getRandomRow(), getRandomSpeed
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
-
-
-
-
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
@@ -137,7 +122,6 @@ document.addEventListener('keyup', function(e) {
 
 
 //HELPER METHODS
-
 function getRandomRow(){
     var randomNumber = Math.floor((Math.random() * ROWS.length));
     return ROWS[randomNumber];
